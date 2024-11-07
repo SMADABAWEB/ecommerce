@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo {
+            display: grid;
+            gap: 10px;
+        }
+
+        /* Tampilan Mobile */
+        .logo img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Tampilan Laptop (3 kolom) */
+        @media (min-width: 768px) {
+            .logo {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ini halaman detail</h1>
+
+    <div class="logo">
+        <img src="asset/logovendor1.png" alt="">
+        <img src="asset/logovendor1.png" alt="">
+        <img src="asset/logovendor1.png" alt="">
+    </div>
+</body>
+</html>

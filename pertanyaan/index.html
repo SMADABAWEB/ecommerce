@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+</head>
+<body>
+    <h1>Penjumlahan</h1>
+    <div>
+        <label for="nilai1">Nilai 1</label>
+        <input type="number" id="nilai1">
+    </div>
+    <div>
+        <label for="nilai2">Nilai 2</label>
+        <input type="number" id="nilai2">
+    </div>
+    <div>
+        <p>Hasil :</p>
+        <p class="hasil" id="hasil"></p>
+    </div>
+    <button class="btn-tambah">Tambah</button>
+
+    <script>
+        // Ambil elemen tombol dan hasil
+        const btnTambah = document.querySelector('.btn-tambah');
+        const hasilElement = document.getElementById('hasil');
+
+        // Tambahkan event listener ke tombol
+        btnTambah.addEventListener('click', function() {
+            // Ambil nilai dari kedua input
+            const nilai1 = parseFloat(document.getElementById('nilai1').value);
+            const nilai2 = parseFloat(document.getElementById('nilai2').value);
+
+            // Pastikan kedua nilai adalah angka
+            if (!isNaN(nilai1) && !isNaN(nilai2)) {
+                // Hitung hasil penjumlahan
+                const hasil = nilai1 + nilai2;
+                // Tampilkan hasil
+                hasilElement.textContent = hasil;
+            } else {
+                hasilElement.textContent = 'Masukkan kedua nilai dengan benar';
+            }
+        });
+    </script>
+</body>
+</html>
